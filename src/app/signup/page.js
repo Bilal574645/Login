@@ -1,24 +1,21 @@
 import React from 'react'
 import Image from 'next/image'
-import images1 from "@/images/Register-Background.png"
+import img2 from '@/img/bg.jpg'; 
+import img3 from '@/images/Nexuslogo.png';
 
 const SignUp = () => {
   return (
     <div>
-   <div className="min-h-screen py-40" style={{ backgroundImage:  'linear-gradient(115deg, #9F7AEA, #FEE2FE)' }}>
+      <div className="h-screen flex items-center justify-center bg-cover bg-no-repeat" style={{ backgroundImage: `url(${img2.src})` }}>
   
 
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto shadow-lg overflow-hidden">
-          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${images1})` }} 
->
-            <h1 className="text-white text-3xl mb-3">Welcome</h1>
-            <div>
-              {/* <p className="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suspendisse aliquam varius rutrum purus maecenas ac <a href="#" className="text-purple-500 font-semibold">Learn more</a></p> */}
-              <Image src={images1} className="max-w-sm h-1" />
-            </div>
-          </div>
-          <div className="w-full lg:w-1/2 py-16 px-12">
+        <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white  mx-auto shadow-lg overflow-hidden dark:bg-black bg-opacity-70 backdrop-blur-lg px-8 py-10 rounded-md border ">
+        
+         
+
+
+          <div className="w-full lg:w-1/2 py-16 px-12 dark:text-white">
             <h2  className="text-3xl mb-4">SIGNUP</h2>
             <p className="mb-4">
               Create your account. Its free and only take a minute
@@ -46,11 +43,28 @@ const SignUp = () => {
                   I accept the <a href="#" className="text-purple-500 font-semibold">Terms of Use</a> &  <a href="#" className="text-purple-500 font-semibold">Privacy Policy</a> 
                 </span>
               </div>
-              <div className="mt-5">
-                <button className="w-full bg-purple-500 py-3 text-center text-white">Register Now</button>
-              </div>
+
+              <div
+            className="mt-5 bg-white hover:bg-gray-400 rounded-md text-black py-2 text-center mb-5 font-semibold cursor-pointer"
+          >
+            Register Now
+          </div>
+
+             
+
             </form>
           </div>
+
+{/* another div */}
+
+        <div>
+
+        </div>
+
+        
+      
+
+
         </div>
       </div>
     </div>

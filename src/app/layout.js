@@ -4,6 +4,10 @@ import { ThemeProvider } from './components/theme-provider';
 import localFont from 'next/font/local';
 import './globals.css';
 import { ModeToggle } from './toggle/page';
+
+
+import Image from 'next/image';
+
 // Load the local fonts with variables
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -29,8 +33,10 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
+
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+       <marquee> </marquee>
         {/* Wrap with ThemeProvider */}
         <ThemeProvider
           attribute="class"
@@ -38,8 +44,13 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <ModeToggle/>
+         
           </ThemeProvider>
+          
+          <ModeToggle/>
+
+    
+          
           {children}
 
        
